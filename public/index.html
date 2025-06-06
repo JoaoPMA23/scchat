@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spolaor Chat Interno</title>
+  <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body>
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+  <div class="container">
+    <div class="sidebar hidden" id="sidebar">
+      <button class="close-sidebar" onclick="closeSidebar()">✕</button>
+      <img src="../public/assets/logo.png" alt="Logo Spolaor" class="logo">
+      <ul>
+        <li>Administração</li>
+        <li class="active">TI</li>
+        <li>Controladoria</li>
+        <li>Fiscal</li>
+        <li>Pessoal</li>
+        <li>Contábil</li>
+        <li>Legalização</li>
+        <li>Financeiro</li>
+      </ul>
+    </div>
+
+    <div class="chat-area">
+      <div class="chat-header">
+        <div class="chat-actions">
+          <button class="toggle-button" onclick="toggleSidebar()">
+            <div class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+          <label for="file-upload" class="import-button" title="Importar Arquivo">
+            <img src="../public/assets/anexo.png" alt="Anexo" style="width: 18px; height: 18px;" />
+          </label>
+          <input type="file" id="file-upload" />
+        </div>
+        <span>TI</span>
+      </div>
+      <div class="chat-messages">
+        <div class="message user">Qual o prazo do imposto X?</div>
+        <div class="message assistant">O prazo é dia 20 do mês seguinte.</div>
+        <div class="message user">Qual a alíquota do Simples?</div>
+        <div class="message assistant">Depende da faixa de receita bruta da empresa.</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Digite uma mensagem" />
+        <button>Enviar</button>
+      </div>
+    </div>
+    <script src="../src/js/script.js"></script>
+  </div>
+</body>
+</html>
